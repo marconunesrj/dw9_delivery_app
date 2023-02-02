@@ -153,7 +153,10 @@ class _RegisterPageState extends BaseState<RegisterPage, RegisterController> {
                       onPressed: () {
                         final valid =
                             _formKey.currentState?.validate() ?? false;
-                        if (valid) {}
+                        if (valid) {
+                          controller.register(
+                              _nameEC.text, _emailEC.text, _passwordEC.text);
+                        }
                       },
                     ),
                   )
