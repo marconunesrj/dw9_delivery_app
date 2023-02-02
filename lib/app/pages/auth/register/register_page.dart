@@ -40,7 +40,8 @@ class _RegisterPageState extends BaseState<RegisterPage, RegisterController> {
     return BlocListener<RegisterController, RegisterState>(
       listener: (context, state) {
         state.status.matchAny(
-          any: () => hideLoader(),
+          any: () =>
+              hideLoader(), // Para qualquer alteração de status vamos fazer o hideLoader que está no BaseState
           register: () => showLoader(),
           error: () {
             hideLoader();
@@ -51,7 +52,7 @@ class _RegisterPageState extends BaseState<RegisterPage, RegisterController> {
             showSuccess('Cadastro realizado com sucesso');
             Navigator.pop(context);
           },
-        ); // Para qualquer alteração de status vamos fazer o hideLoader que está no BaseState
+        );
       },
       child: Scaffold(
         appBar: DeliveryAppBar(),
