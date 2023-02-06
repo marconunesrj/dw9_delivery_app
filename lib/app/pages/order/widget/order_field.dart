@@ -28,7 +28,7 @@ class OrderField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: 35,
+            height: 25,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
@@ -41,6 +41,8 @@ class OrderField extends StatelessWidget {
             ),
           ),
           TextFormField(
+            controller: controller,
+            validator: validator,
             decoration: InputDecoration(
               hintText: hintText,
               border: defaultBorder,

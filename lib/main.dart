@@ -9,6 +9,6 @@ void main() async {
   // Carregar as variáveis de ambiente.
   await Env.instance.load();
   runApp(
-    const Dw9DeliveryApp(),
+    Dw9DeliveryApp(),
   );
 }
